@@ -1,9 +1,9 @@
 // import { useState } from "react";
 import Tasks from "./Task";
-// import CreateToDo from "./CreateToDo";
+import CreateToDo from "./CreateToDo";
 import "./TaskListStyle.css";
 import Icon from "@mdi/react";
-// import { mdiTrashCanOutline, mdiNoteEditOutline } from "@mdi/js";
+import { mdiTrashCanOutline, mdiNoteEditOutline } from "@mdi/js";
 
 export const TaskList = () => {
  
@@ -28,7 +28,7 @@ export const TaskList = () => {
 
         <div className="icon">
           <button className="btniconedit">
-            {/* <Icon path={mdiNoteEditOutline} size={1} color={" #646cff"} /> */}
+            <Icon path={mdiNoteEditOutline} size={1} color={" #646cff"} />
           </button>
 
           <button
@@ -37,7 +37,7 @@ export const TaskList = () => {
               borderColor: "transparent",
             }}
           >
-            {/* <Icon path={mdiTrashCanOutline} size={1} color={"#e63739"} /> */}
+            <Icon path={mdiTrashCanOutline} size={1} color={"#e63739"} />
           </button>
         </div>
       </div>
@@ -46,7 +46,7 @@ export const TaskList = () => {
 
   return (
     <div className="cardList">
-      {/* <CreateToDo /> */}
+      <CreateToDo />
       <ul>{listItems}</ul>;
     </div>
   );
