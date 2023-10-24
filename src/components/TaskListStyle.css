@@ -1,0 +1,63 @@
+.cardList{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    accent-color: green;
+    cursor: pointer;
+}
+
+/* .btniconedit :active {
+    background-color: red;
+    outline: brown;
+} */
+/* .btniconedit :focus {
+    background-color: red;
+    border: solid 10px red;
+    outline: brown;
+} */
+.btniconedit{
+    background-color: transparent;
+    border-style: hidden;
+}
+
+.cardforlist{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 10px;
+    background-color: #eeeeef;
+    align-items: center;
+    margin-right: 30px;
+}
+.icon{
+    display:flex;
+    gap: 5px;       
+}
+
+/* crear tareas con estilo */
+
+.createtodo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+.input{
+    background-color: #eeeeef;
+    border-radius: 20px;
+    border-style: dotted;
+    border-color:#eeeeef;
+    color: black;
+    text-align: center;
+    padding-top: 5px;
+        
+}
+.btniconadd{
+    background-color: transparent;
+    border-style: hidden;
+}

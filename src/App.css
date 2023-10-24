@@ -1,0 +1,8 @@
+.app{
+    border: solid 5px black;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
