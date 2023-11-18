@@ -59,5 +59,18 @@
 }
 .btniconadd{
     background-color: transparent;
-    border-style: hidden;
+    border-style: none;
+}
+.footerbtntextcounter{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    align-items: center;
+}
+.btnfooter{
+    background-color: #dc3242;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
 }

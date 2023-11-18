@@ -1,6 +1,6 @@
 .app{
-    border: solid 5px black;
-    width: 400px;
+    border: solid 4px black;
+    width: 600px;
     height: auto;
     display: flex;
     flex-direction: column;
