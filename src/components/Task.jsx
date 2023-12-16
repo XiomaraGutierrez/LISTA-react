@@ -13,7 +13,6 @@ function Tasks() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       setTasks(data)
     })
     .catch((err) => {
