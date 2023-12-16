@@ -4,12 +4,12 @@ import Task from "./components/Task";
 // import "./App.css"
 import { Box, SimpleGrid } from "@chakra-ui/react";
 
-fetch("http://localhost:5000/tasks", {
-  method: "Get",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+// fetch("http://localhost:5000/tasks", {
+//   method: "Get",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
 
 function App() {
   return (
