@@ -2,7 +2,7 @@ import { useState } from "react";
 import TaskItem from "./TaskItem";
 
 function Tasks() {
-  const [tasks, setTasks] = useState();
+  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
   fetch("http://localhost:5000/tasks", {
