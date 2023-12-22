@@ -1,8 +1,8 @@
 import { useState } from "react";
 import TaskItem from "./TaskItem";
 import { Box, Input } from "@chakra-ui/react";
-import Icon from "@mdi/react";
 import { mdiNotePlusOutline} from "@mdi/js";
+import Icon from "@mdi/react";
 
 
 function Tasks() {
@@ -27,7 +27,7 @@ function Tasks() {
   const handleAddTask = () => {
     if (newTask) {
       setTasks([...tasks, newTask]);
-      setNewTask("");
+      setNewTask(" ");
     }
   };
 
@@ -58,7 +58,7 @@ function Tasks() {
           onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
         />        
       <button onClick={handleAddTask}>
-      <Icon path={mdiNotePlusOutline} size={1.2} color={"#04caf1"} />
+      <Icon path={mdiNotePlusOutline} size={1.5} color={"#04caf1"} />
       </button>
       </Box>
       <ul>
