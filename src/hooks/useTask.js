@@ -33,7 +33,7 @@ const useTask = () => {
       setArrayTask([]);
     }
   };
-
+  
   const handleClickDelete = (id) => {
     var dataTasks = JSON.parse(miStorage.getItem("dataTasks"));
     let deleteTask = dataTasks.filter((task) => task.id != id);
