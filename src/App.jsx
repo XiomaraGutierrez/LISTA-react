@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Task from "./components/Task";
 // import {TaskList} from "./components/TaskList"
 // import "./App.css"
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, useColorMode } from "@chakra-ui/react";
 
 // fetch("http://localhost:5000/tasks", {
 //   method: "Get",
@@ -12,10 +12,12 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 // });
 
 function App() {
+  const { toggleColorMode, colorMode } = useColorMode();
+  const isDarkMode = colorMode === "dark";
   return (
     <>
       <Box
-        bg="black"
+        bg={isDarkMode ? "gray.700" : "white"}
         justifyContent={"center"}
         alignItems={"center"}
         display={"flex"}
@@ -31,7 +33,7 @@ function App() {
             borderRadius="15px"
             w="750px"
             overflow="auto"
-            bgGradient="linear(to-r, green.400, yellow.500)"
+            bg={isDarkMode ? "gray.600" : "white"}
           >
           <Box
           display={"flex"}
