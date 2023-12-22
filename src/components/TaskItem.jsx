@@ -44,10 +44,12 @@ function TaskItem({ task, onDelete, onUpdate }) {
               </>
             ) : (
               <>
-                {task.name}
+              {task.name}
                 <button onClick={handleEdit}>Editar</button>
               </>
             )}
+            
+
             <button onClick={() => onDelete(task)}>Borrar</button>
           </ul>
         </div>
