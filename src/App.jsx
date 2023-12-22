@@ -12,7 +12,7 @@ import { Box, SimpleGrid, useColorMode } from "@chakra-ui/react";
 // });
 
 function App() {
-  const { toggleColorMode, colorMode } = useColorMode();
+  const {  colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
   return (
     <>
