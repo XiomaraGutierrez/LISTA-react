@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TaskItem from "./TaskItem";
-import { Box, Input } from "@chakra-ui/react";
+import { Box, IconButton, Input, useColorMode } from "@chakra-ui/react";
 import { mdiNotePlusOutline} from "@mdi/js";
 import Icon from "@mdi/react";
 
@@ -8,6 +8,7 @@ import Icon from "@mdi/react";
 function Tasks() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  const { colorMode } = useColorMode();
 
   fetch("http://localhost:5000/tasks", {
     method: "GET",
@@ -57,9 +58,17 @@ function Tasks() {
           value={newTask.title}
           onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
         />        
-      <button onClick={handleAddTask}>
-      <Icon path={mdiNotePlusOutline} size={1.5} color={"#04caf1"} />
-      </button>
+         <IconButton
+            bg="none"
+            onClick={handleAddTask}
+            icon={
+              colorMode === "light" ? (
+                <Icon path={mdiNotePlusOutline} size={1.2} color="#04caf1" />
+              ) : (
+                <Icon path={mdiNotePlusOutline} size={1.2} color="#04caf1" />
+              )
+            }
+          />      
       </Box>
       <ul>
         {tasks.map((task, index) => (
