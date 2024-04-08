@@ -50,28 +50,31 @@ function Tasks() {
         justifyContent="space-evenly"
         w="425px"
       >
-        <Input
+        <Input   /* texto para recibir la tarea*/ 
+          
           type="text"
           w="300px"
           border="solid 1px"
-          placeholder="crear nueva tarea"
+          placeholder="crea una nueva tarea"
           value={newTask.title}
           onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
+          
         />        
-         <IconButton
+         <IconButton    /*  boton de añadir una nueva tarea  */
             bg="none"
             onClick={handleAddTask}
             icon={
               colorMode === "light" ? (
                 <Icon path={mdiNotePlusOutline} size={1.2} color="#04caf1" />
               ) : (
-                <Icon path={mdiNotePlusOutline} size={1.2} color="#04caf1" />
+                <Icon path={mdiNotePlusOutline} size={1.2} color="#04f1dd" />
               )
             }
           />      
-      </Box>
+      </Box> 
+      
       <ul>
-        {tasks.map((task, index) => (
+        {tasks.map((task, index) => (/* hace la lista de las actividades */
           <TaskItem
             key={index}
             task={task}
@@ -85,3 +88,6 @@ function Tasks() {
 }
 
 export default Tasks;
+
+
+

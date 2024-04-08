@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background-color: rgb(116, 115, 115);
+  background-color: rgb(116, 116, 115);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,7 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   justify-content:space-around;
-  border: solid 5px orange;
+  border:solid 35px orange;
 }
 
 h1 {
@@ -34,11 +34,11 @@ button {
 button:hover {
   border-color: #646cff;
 }
-/* button:focus,
+/*  button:focus,
 button:focus-visible {
   outline: 14px auto -webkit-focus-ring-color;
-} */
-/* 
+} 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

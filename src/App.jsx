@@ -1,34 +1,26 @@
 import Header from "./components/Header";
 import Task from "./components/Task";
-// import {TaskList} from "./components/TaskList"
-// import "./App.css"
+
 import { Box, SimpleGrid, useColorMode, IconButton } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-
-
-// fetch("http://localhost:5000/tasks", {
-//   method: "Get",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// });
 
 function App() {
   const { toggleColorMode, colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
   return (
     <>
-      <Box
-        bg={isDarkMode ? "gray.700" : "white"}
+      <Box /*  fondo de  noche y dia */
+        bg={isDarkMode ? "#214F6B" : "#FFA07A"}
         justifyContent={"center"}
         alignItems={"center"}
         display={"flex"}
         w="auto"
         h="100vh"
       >
-        <SimpleGrid>
-          <Box
+        <SimpleGrid>  
+          <Box   /*caja delimitante dinamica de la lista */
+
             boxShadow="dark-lg"
             display="flex"
             flexDirection="column"
@@ -36,7 +28,7 @@ function App() {
             borderRadius="15px"
             w="750px"
             overflow="auto"
-            bg={isDarkMode ? "gray.600" : "white"}
+            bg={isDarkMode ? "gray.600" : "AntiqueWhite"}
           >
           <Box
           display={"flex"}
@@ -59,9 +51,9 @@ function App() {
           </Box>
         </SimpleGrid>
         <IconButton
-          icon={
+          icon={  /*color y ubicacion del icono de cambio de modo dia/noche */
             colorMode === "light" ? (
-              <MoonIcon boxSize="30px" color={"gold"} />
+              <MoonIcon boxSize="30px" color={"silver"} />
             ) : (
               <SunIcon boxSize="30px" color={"gold"} />
             )

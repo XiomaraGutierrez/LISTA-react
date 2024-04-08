@@ -23,7 +23,7 @@ function TaskItem({ task, onDelete, onUpdate }) {
   TaskItem.propTypes = {
     task: PropTypes.shape({
       title: PropTypes.string,
-      // Agrega aquí cualquier otra prop que tu objeto 'task' pueda tener
+      
     }).isRequired, // Ejemplo: Se espera que 'task' sea una cadena y sea requerida.
     onDelete: PropTypes.func.isRequired, // Ejemplo: Se espera que 'onDelete' sea una función y sea requerida.
     onUpdate: PropTypes.func.isRequired, // Ejemplo: Se espera que 'onUpdate' sea una función y sea requerida.
@@ -65,54 +65,18 @@ function TaskItem({ task, onDelete, onUpdate }) {
               borderColor={"transparent"}
               left={5}
               borderRadius={20}
-              cursor={"pointer"}
+              cursor={"pointer"} 
             />
           </Stack>
           <Text w="200px" textColor={"black"}>
             {task.title}
           </Text>
-          {isEditing !== null ? (
-            <>
-              <Input
-                type="text"
-                value={editedTask}
-                onChange={(e) => setEditedTask(e.target.value)}
-              />
-              <IconButton
-                bg="none"
-                onClick={handleSave}
-                icon={
-                  colorMode === "light" ? (
-                    <Icon path={mdiCheckDecagram} size={1.2} color="#04caf1" />
-                  ) : (
-                    <Icon path={mdiCheckDecagram} size={1.2} color="white" />
-                  )
-                }
-              />
-            </>
-          ) : (
-            <>
-              <IconButton
-                bg="none"
-                onClick={handleEdit}
-                icon={
-                  colorMode === "light" ? (
-                    <Icon
-                      path={mdiNoteEditOutline}
-                      size={1.2}
-                      color="#04caf1"
-                    />
-                  ) : (
-                    <Icon path={mdiNoteEditOutline} size={1.2} color="#04caf1" />
-                  )
-                }
-              />
-            </>
-
-          )}
+         
+         
           <IconButton
                 bg="none"
                 onClick={() => onDelete(task)}
+               
                 icon={
                   colorMode === "light" ? (
                     <Icon
@@ -124,7 +88,8 @@ function TaskItem({ task, onDelete, onUpdate }) {
                     <Icon path={mdiTrashCanOutline} size={1.2} color="#e63739" />
                   )
                 }
-              />          
+              // if ( onDelete:true ) delete Checkbox   
+              />         
         </List>
       </UnorderedList>      
     </Box>
